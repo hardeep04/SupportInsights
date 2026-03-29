@@ -5,10 +5,10 @@
 import { useCallback, useState } from 'react';
 import OpenRouterService from '../services/OpenRouterService';
 import { AnalysisError, AnalysisStatus, GeminiAnalysisResponse, Ticket, normalizeCategory, normalizeStatus, parseDate } from '../types';
-<<<<<<< HEAD
-=======
+
+
 import { SafeStorage } from '../utils/safeStorage';
->>>>>>> 6babdba (changes)
+
 
 export interface UseGeminiAnalysisResult {
   analysis: GeminiAnalysisResponse | null;
@@ -26,16 +26,12 @@ export interface UseGeminiAnalysisResult {
  * @returns Analysis result, status, error handling, and control functions
  */
 export function useGeminiAnalysis(initialApiKey?: string): UseGeminiAnalysisResult {
-<<<<<<< HEAD
-  const [analysis, setAnalysis] = useState<GeminiAnalysisResponse | null>(null);
-=======
   // Initialize with cached analysis from localStorage (persists across page refreshes)
   // Using SafeStorage to prevent errors if localStorage is disabled
   const [analysis, setAnalysis] = useState<GeminiAnalysisResponse | null>(() => {
     const cached = SafeStorage.getJSON<GeminiAnalysisResponse>('_cache_analysis', null);
     return cached;
   });
->>>>>>> 6babdba (changes)
   const [status, setStatus] = useState<AnalysisStatus>('idle');
   const [error, setError] = useState<AnalysisError | null>(null);
 
@@ -95,16 +91,16 @@ export function useGeminiAnalysis(initialApiKey?: string): UseGeminiAnalysisResu
  * @returns Parsing function and state management
  */
 export function useCsvParser() {
-<<<<<<< HEAD
-  const [parsedData, setParsedData] = useState<Ticket[]>([]);
-=======
+
+  // const [parsedData, setParsedData] = useState<Ticket[]>([]);
+
   // Initialize with cached data from localStorage (persists across page refreshes)
   // Using SafeStorage to prevent errors if localStorage is disabled
   const [parsedData, setParsedData] = useState<Ticket[]>(() => {
     const cached = SafeStorage.getJSON<Ticket[]>('_cache_tickets', []);
     return cached || [];
   });
->>>>>>> 6babdba (changes)
+
   const [parseError, setParseError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 

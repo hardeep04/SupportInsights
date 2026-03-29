@@ -152,13 +152,8 @@ class OpenRouterService {
 - Top Problem Products: ${topProducts || 'None flagged'}
 
 Provide:
-<<<<<<< HEAD
-1. A 5-line executive summary for this week's support queue
+1. A 5-point executive summary for this week's support queue - format each point as a separate line starting with a dash (-)
 2. 2-3 key patterns/trends and recommendations`;
-=======
-1. A 5-point executive summary - KEEP EACH POINT TO 5-8 WORDS MAX. Format as: - Point (no sentence fragments, just key facts)
-2. 1-2 top action items to prioritize`;
->>>>>>> 6babdba (changes)
   }
 
   /**
@@ -183,11 +178,7 @@ Provide:
       const messages: OpenRouterMessage[] = [
         {
           role: 'user',
-<<<<<<< HEAD
-          content: `${optimizedPrompt}\n\nRespond as JSON: {"summary": "5-line exec summary", "patterns": [{"pattern": "...", "impact": "...", "recommendation": "..."}]}`,
-=======
-          content: `${optimizedPrompt}\n\nRespond as JSON: {"summary": "- Key fact 1\\n- Key fact 2\\n- Key fact 3\\n- Key fact 4\\n- Key fact 5", "patterns": [{"pattern": "...", "recommendation": "..."}]}`,
->>>>>>> 6babdba (changes)
+          content: `${optimizedPrompt}\n\nRespond as JSON: {"summary": "- Point 1\\n- Point 2\\n- Point 3\\n- Point 4\\n- Point 5", "patterns": [{"pattern": "...", "impact": "...", "recommendation": "..."}]}`,
         },
       ];
 
