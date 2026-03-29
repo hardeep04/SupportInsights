@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: radial-gradient(circle at 20% 10%, #f8fafc 0%, #eef2ff 40%, #f8fafc 100%);
+    color: #0f172a;
+    min-height: 100vh;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white/90 border border-slate-200 rounded-2xl shadow-[0_8px_30px_rgba(15,23,42,0.08)] p-6;
+  }
+
+  .card-hover {
+    @apply hover:shadow-[0_12px_30px_rgba(15,23,42,0.12)] hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-sky-600 to-indigo-600 text-white px-5 py-2.5 rounded-xl font-semibold shadow-md hover:opacity-95 active:scale-95 transition-all duration-150;
+  }
+
+  .btn-secondary {
+    @apply bg-white border border-slate-300 text-slate-700 px-5 py-2.5 rounded-xl font-semibold hover:bg-slate-50 transition-all duration-150;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 rounded-xl border border-slate-300 bg-white text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent;
+  }
+
+  .glass-bg {
+    @apply bg-white/85 backdrop-blur-lg border border-slate-200/60 rounded-3xl shadow-[0_12px_30px_rgba(15,23,42,0.09)];
+  }
+}
