@@ -98,7 +98,7 @@ export const AnomaliesComponent: React.FC<AnomaliesComponentProps> = ({ tickets,
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <ShieldAlert className="text-rose-500" size={18} />
-          <h3 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">Anomalies Detected</h3>
+          <h3 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">Top Issues</h3>
         </div>
         <span className="px-2 py-0.5 bg-rose-100 text-rose-600 text-[10px] font-bold rounded-md">
           {anomalies.length} ISSUES

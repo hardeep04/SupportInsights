@@ -255,7 +255,10 @@ function App() {
                       </button>
                     </div>
                   </div> */}
-
+<div className="col-span-12 ">
+<KeyInsights patterns={analysis.keyPatterns} />
+                   
+                  </div>
                 </div>
               )}
 
@@ -286,7 +289,7 @@ function App() {
 
               {activeView === 'action' && (
                 <div className="space-y-8 animate-in zoom-in-95 duration-500">
-                  <KeyInsights patterns={analysis.keyPatterns} />
+                  
                   <PlanOfAction 
                     topIssues={analysis.topIssues} 
                     unresolvedTickets={analysis.unresolvedTickets} 
